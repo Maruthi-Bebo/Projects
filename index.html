@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        .mainWrapper{
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+        a{
+            height: 41px;
+            width: 246px;
+            margin: 20px;
+            padding-top: 13px;
+            margin:20px;
+            border:none;
+            background-color:transparent;
+            font-size:1.5em;
+            color:blueviolet;
+            cursor:pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        #seventhButton{
+            position:relative;
+            border:2px solid blueviolet;
+            transition:0.3s;
+            }
+            #seventhButton::after{
+            position:absolute;
+            content:'';
+            top:0;
+            right:0;
+            height:0;
+            width:0;
+            border-style:solid;
+            border-width:0 0 0 0;
+            border-color:transparent blueviolet transparent transparent;
+            transition:0.3s;
+            }
+            #seventhButton::before{
+            position:absolute;
+            content:'';
+            bottom:0;
+            right:0;
+            height:0;
+            width:0;
+            border-style:solid;
+            border-width:0 0 0 0;
+            border-color:transparent transparent blueviolet transparent;
+            transition:0.3s;
+            }
+            #seventhText{
+            transition:0.3s
+            }
+            #seventhButton:hover > #seventhText{
+            padding-right:20px;
+            }
+            #seventhButton:hover::after{
+            border-width:0 40px 40px 0;
+
+            }
+            #seventhButton:hover::before{
+            border-width:0 0 40px 40px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="mainWrapper">
+        <a id="seventhButton" href="buttons.html"><span id="seventhText">Button Styles</span></a>
+        <a id="seventhButton" href="buttons.html"><span id="seventhText">Button Styles</span></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        .buttons{
+            text-align: center;
+            margin:10rem;
+        }
+        button{
+            height:70px;
+            width:120px;
+            margin:20px;
+            border:none;
+            background-color:transparent;
+            font-size:1.5em;
+            color:blueviolet;
+            cursor:pointer;
+        }
+
+            /* first button animation */
+        #firstButton{
+            border:2px solid blueviolet;
+            transition:all 0.5s; 
+        }
+        #firstButton:hover{
+            background-color:blueviolet;
+            color:white;
+        }
+            /* second button animation */
+        #secondButton{
+            position:relative;
+        }
+        #secondButton::after{
+            position:absolute;
+            content:'';
+            top:0;
+            left:0;
+            height:2px;
+            width:0%;
+            background-color:blueviolet;
+            transition:all 0.3s;
+        }
+        #secondButton::before{
+            position:absolute;
+            content:'';
+            bottom:0;
+            right:0;
+            height:2px;
+            width:0%;
+            background-color:blueviolet;
+            transition:all 0.3s;
+        }
+        #secondButton:hover::after,
+        #secondButton:hover::before{
+            width:100%;
+        }
+
+            /* third button animation */
+        #thirdButton{
+            position:relative;
+            transition:0.3s ease-in;
+        }
+        #thirdButton::after{
+            position:absolute;
+            content:'';
+            bottom:0;
+            left:0;
+            height:0%;
+            width:100%;
+            background-color:blueviolet;
+            z-index:-1;
+            transition:0.3s ease-in;
+        }
+        #thirdButton:hover{
+            color:white;
+        }
+        #thirdButton:hover::after{
+            height:100%;
+        }
+            /* fourth Button animation */
+        #fourthButton{
+            position:relative;
+            transition:0.4s;
+        }
+        #fourthButton::after{
+            position:absolute;
+            content:'';
+            height:0%;
+            width:0%;
+            background-color:blueviolet;
+            top:0;
+            right:0;
+            z-index:-1;
+            transition:0.4s;
+        }
+        #fourthButton::before{
+            position:absolute;
+            content:'';
+            height:0%;
+            width:0%;
+            background-color:blueviolet;
+            bottom:0;
+            left:0;
+            z-index:-1;
+            transition:0.4s;
+        }
+            #fourthButton:hover{
+            color:white;
+            }
+            #fourthButton:hover::after,
+            #fourthButton:hover::before{
+            height:100%;
+            width:100%;
+            }
+
+            /* Fifth Button Animation */
+            #fifthButton{
+            position:relative;
+            }
+            #fifthButton::after{
+            position:absolute;
+            content:'';
+            background-color:blueviolet;
+            width:0%;
+            height:2px;
+            top:0;
+            left:0;
+            transition:0.4s;
+            }
+            #fifthButton::before{
+            position:absolute;
+            content:'';
+            background-color:blueviolet;
+            width:0%;
+            height:2px;
+            bottom:0;
+            right:0;
+            transition:0.4s;
+            }
+            #fifthSpan::after{
+            position:absolute;
+            content:'';
+            background-color:blueviolet;
+            height:0%;
+            width:2px;
+            top:0;
+            right:0;
+            transition:0.4s;
+            }
+            #fifthSpan::before{
+            position:absolute;
+            content:'';
+            background-color:blueviolet;
+            height:0%;
+            width:2px;
+            bottom:0;
+            left:0;
+            transition:0.4s;
+            }
+            #fifthButton:hover::after{
+            width:100%; 
+            }
+            #fifthButton:hover::before{
+            width:100%; 
+            }
+            #fifthButton:hover > #fifthSpan::after{
+            height:100%;
+            }
+            #fifthButton:hover > #fifthSpan::before{
+            height:100%;
+            }
+
+            /* Sixth button Animation */
+            #sixthButton{
+            position:relative;
+            transition: 0.3s ease-out;
+            }
+            #sixthButton::before{
+            position:absolute;
+            background-color:blueviolet;
+            content:'';
+            width:2px;
+            height:100%;
+            top:0;
+            left:0;
+            z-index:-1;
+            transition: 0.3s ease-in;
+            }
+            #sixthButton:hover{
+            color:white;
+            }
+            #sixthButton:hover::before{
+            width:100%;
+            }
+
+            /* Seventh Button Animation */
+            #seventhButton{
+            position:relative;
+            border:2px solid blueviolet;
+            transition:0.3s;
+            }
+            #seventhButton::after{
+            position:absolute;
+            content:'';
+            top:0;
+            right:0;
+            height:0;
+            width:0;
+            border-style:solid;
+            border-width:0 0 0 0;
+            border-color:transparent blueviolet transparent transparent;
+            transition:0.3s;
+            }
+            #seventhButton::before{
+            position:absolute;
+            content:'';
+            bottom:0;
+            right:0;
+            height:0;
+            width:0;
+            border-style:solid;
+            border-width:0 0 0 0;
+            border-color:transparent transparent blueviolet transparent;
+            transition:0.3s;
+            }
+            #seventhText{
+            transition:0.3s
+            }
+            #seventhButton:hover > #seventhText{
+            padding-right:20px;
+            }
+            #seventhButton:hover::after{
+            border-width:0 40px 40px 0;
+
+            }
+            #seventhButton:hover::before{
+            border-width:0 0 40px 40px;
+            }
+
+            /* Eigth button animation */
+            #eigthButton{
+            position:relative;
+            transition:0.4s;
+            }
+            #eigthButton::after{
+            position:absolute;
+            content:'';
+            background-color:blueviolet;
+            width:0%;
+            height:0%;
+            top:45%;
+            left:45%;
+            border-radius:50%;
+            transition:0.4s;
+            z-index:-1;
+            }
+            #eigthButton:hover{
+            color:white;
+            }
+            #eigthButton:hover::after{
+            top:0;
+            left:0;
+            border-radius:0;
+            width:100%;
+            height:100%;
+            }
+            .backWrapper{
+                text-align: right;
+                margin-right: 10rem;
+            }
+            .backButton{
+                color: black;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="firstButton">Hover</button>
+        <button id="secondButton">Hover</button>
+        <button id="thirdButton">Hover</button>
+        <button id="fourthButton">Hover</button>
+        <button id="fifthButton"><span id="fifthSpan"></span>Hover</button>
+        <button id="sixthButton">Hover</button>
+        <button id="seventhButton"><span id="seventhText">Hover</span></button>
+        <button id="eigthButton">Hover</button>
+    </div>
+    <div class="backWrapper">
+        <a href="index.html" class="backButton">Back</a>
+    </div>
+</body>
+</html> 
